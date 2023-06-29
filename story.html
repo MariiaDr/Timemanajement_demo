@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- Created using Storyline 360 - http://www.articulate.com  -->
-  <!-- version: 3.76.30446.0 -->
+  <!-- version: 3.77.30587.0 -->
   <title>Timemenejment_Mariia.Selezen</title>
   <meta http-equiv="x-ua-compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no,minimal-ui"/>
@@ -28,7 +28,7 @@
       captureRc: false,
       browserSize: 'optimal',
       bgColor: '#FFFFFF',
-      features: 'AccessibleVideo,ConnectionMessages,DropIn1,FullScreenToggle,InsertSvgPicture,LayerPresentAsDialog,MultipleQuizTracking,PlayerSpeedControl,StreamingVideo,UpdatedThemeEditor,UseAudioElement,VideoTranscripts',
+      features: 'AccessibleVideo,ConnectionMessages,DropIn1,DropIn2,FullScreenToggle,LayerPresentAsDialog,MultipleQuizTracking,PlayerSpeedControl,StreamingVideo,UpdatedThemeEditor,UseAudioElement,VideoSync',
       themeName: 'unified',
       preloaderColor: '#8C8C8C',
       suppressAnalytics: false,
@@ -36,8 +36,8 @@
       publishSource: 'storyline',
       aid: 'aid|6719216d-f99c-485b-b03f-3859080e1500',
       cid: '72a28c19-770e-455a-ab73-961a176df7e0',
-      playerVersion: '3.76.30446.0',
-      publishTimestamp: '2023-06-23T12:52:12.7927597Z',
+      playerVersion: '3.77.30587.0',
+      publishTimestamp: '2023-06-29T07:58:26.0265145Z',
       maxIosVideoElements: 10,
       connectionSettings: { message: 'You%20are%20offline.%20Trying%20to%20reconnect...', useDarkTheme: true, mode: 'disabled' },
 
@@ -342,7 +342,7 @@
     function assetFailed(url) {
       if (!useConnectionMessages) { return; }
       if (!DS.connection.assets[url]) {
-        if (/\.js$/.test(url)) {
+        if (/\.js$/.test(url) && url.indexOf('transcripts') === -1) {
           setTimeout(function() {
             if (DS.connection.lastSlideLoaded != null) {
               DS.connection.lastSlideLoaded();
